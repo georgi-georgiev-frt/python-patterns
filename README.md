@@ -23,7 +23,7 @@ Current Patterns:
 | [composite](composite.py) | encapsulate and provide access to a number of different objects | |
 | [decorator](decorator.py) | wrap functionality with other functionality in order to affect outputs | |
 | [facade](facade.py) | use one class as an API to a number of others | |
-| [factory_method](factory_method.py) | delegate a specialized function/method to create instances | |
+| [factory_method](factory_method.py) | Define an interface for creating an object, but let the classes that implement the interface decide which class to instantiate. The Factory method lets a class defer instantiation to subclasses. | |
 | [flyweight](flyweight.py) | transparently reuse existing instances of objects with similar/identical state | | 
 | [graph_search](graph_search.py) | (graphing algorithms, not design patterns) | |
 | [mediator](mediator.py) | an object that knows how to connect other objects and act as a proxy | |
