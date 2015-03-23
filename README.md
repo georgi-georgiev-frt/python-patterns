@@ -7,7 +7,13 @@ When an implementation is added or modified, be sure to update this file and
 rerun `append_output.sh` (eg. ./append_output.sh borg.py) to keep the output
 comments at the bottom up to date.
 
-Current Patterns:
+Examples and references from: [https://github.com/domnikl/DesignPatternsPHP](https://github.com/domnikl/DesignPatternsPHP) 
+
+Design Patterns:
+| [Abstract factory](abstract_factory.py) | use a generic function with specific factories | [:page_facing_up:](abstract_factory.py)<br>[:bar_chart:](diagrams/abstract_factory.png?raw=true)<br>[:book:](http://en.wikipedia.org/wiki/Abstract_factory_pattern) |
+| [Factory method](factory_method.py) | delegate a specialized function/method to create instances | |
+
+All other Patterns: 
 
 | Pattern | Description |     |
 |:-------:| ----------- | --- |
