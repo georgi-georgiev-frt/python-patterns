@@ -11,6 +11,10 @@ from abc import ABCMeta, abstractmethod  # Be able writing abstract classes
 
 
 class AbstractFactory:
+    """
+    Interface for creating families of related or dependent objects. In the current example - text and picture
+    https://github.com/georgi-georgiev-frt/python-patterns#abstract-factory-vs-factory-method-patterns-whats-the-difference
+    """
     __metaclass__ = ABCMeta
 
     def __init__(self):

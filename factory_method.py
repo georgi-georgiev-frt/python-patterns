@@ -15,6 +15,10 @@ from abc import ABCMeta, abstractmethod  # Be able writing abstract classes
 # Factories
 
 class VideoFactory:  # This is an interface to keep it simple
+    """
+    Defining an interface for creating single object. Let subclasses decide what class to instantiate.
+    https://github.com/georgi-georgiev-frt/python-patterns#abstract-factory-vs-factory-method-patterns-whats-the-difference
+    """
     VIDEO_TYPE_COMMERCIAL = 'commercial'
     VIDEO_TYPE_TUTORIAL = 'tutorial'
 
@@ -22,6 +26,9 @@ class VideoFactory:  # This is an interface to keep it simple
         pass
 
     def create_video(self, video_type, video_src):
+        """
+        :rtype AbstractVideo
+        """
         raise NotImplementedError
 
 
@@ -32,13 +39,21 @@ class SiteOneVideoFactory(VideoFactory):
 
     def create_video(self, video_type, video_id):
         if video_type == VideoFactory.VIDEO_TYPE_COMMERCIAL:
-            return YouTubeCommercialVideo(video_id)
+            video = YouTubeVideo(video_id, video_type)
+            # Perform commercial video creational tasks
+            video.set_is_commercial(True)  # Not really best example for creational task
+            video.set_is_tutorial(False)  # Neither this one, but you got the idea :)
 
         elif video_type == VideoFactory.VIDEO_TYPE_TUTORIAL:
-            return YouTubeTutorialVideo(video_id)
+            video = YouTubeVideo(video_id, video_type)
+            # Performing tutorial video creational tasks
+            video.set_is_commercial(False)
+            video.set_is_tutorial(True)
 
         else:
             raise ValueError('Invalid video type {}'.format(video_type))
+
+        return video
 
 
 class SiteTwoVideoFactory(VideoFactory):
@@ -47,13 +62,21 @@ class SiteTwoVideoFactory(VideoFactory):
     """
     def create_video(self, video_type, video_id):
         if video_type == VideoFactory.VIDEO_TYPE_COMMERCIAL:
-            return VimeoCommercialVideo(video_id)
+            video = VimeoVideo(video_id, video_type)
+            # Performing commercial video creational tasks
+            video.set_is_commercial(True)
+            video.set_is_tutorial(False)
 
         elif video_type == VideoFactory.VIDEO_TYPE_TUTORIAL:
-            return VimeoTutorialVideo(video_id)
+            video = VimeoVideo(video_id, video_type)
+            # Performing tutorial video creational tasks
+            video.set_is_commercial(False)
+            video.set_is_tutorial(True)
 
         else:
             raise ValueError('Invalid video type {}'.format(video_type))
+
+        return video
 
 
 # Entities
@@ -61,52 +84,40 @@ class SiteTwoVideoFactory(VideoFactory):
 class AbstractVideo:
     __metaclass__ = ABCMeta
 
-    def __init__(self):
-        pass
+    def __init__(self, video_type):
+        self._is_commercial = False
+        self._is_tutorial = False
+        self._video_type = video_type
 
     @abstractmethod
     def get_video_data(self):
         pass
 
+    def set_is_commercial(self, is_commercial):
+        self._is_commercial = is_commercial
 
-class YouTubeCommercialVideo(AbstractVideo):
-    def __init__(self, video_id, *args, **kwargs):
+    def set_is_tutorial(self, is_tutorial):
+        self._is_tutorial = is_tutorial
+
+
+class YouTubeVideo(AbstractVideo):
+    def __init__(self, video_id, video_type):
         self._video_src = 'http://www.youtube.com/?watch={}'.format(video_id)
 
-        super(YouTubeCommercialVideo, self).__init__(*args, **kwargs)
+        super(YouTubeVideo, self).__init__(video_type)
 
     def get_video_data(self):
-        return {'video_type': 'commercial', 'provider': 'Youtube', 'src': self._video_src}
+        return {'video_type': self._video_type, 'provider': 'Youtube', 'src': self._video_src}
 
 
-class YouTubeTutorialVideo(AbstractVideo):
-    def __init__(self, video_id, *args, **kwargs):
-        self._video_src = 'http://www.youtube.com/?watch={}'.format(video_id)
-
-        super(YouTubeTutorialVideo, self).__init__(*args, **kwargs)
-
-    def get_video_data(self):
-        return {'video_type': 'tutorial', 'provider': 'Youtube', 'src': self._video_src}
-
-
-class VimeoCommercialVideo(AbstractVideo):
-    def __init__(self, video_id, *args, **kwargs):
+class VimeoVideo(AbstractVideo):
+    def __init__(self, video_id, video_type):
         self._video_src = 'http://www.vimeo.com/?watch={}'.format(video_id)
 
-        super(VimeoCommercialVideo, self).__init__(*args, **kwargs)
+        super(VimeoVideo, self).__init__(video_type)
 
     def get_video_data(self):
-        return {'video_type': 'commercial', 'provider': 'Vimeo', 'src': self._video_src}
-
-
-class VimeoTutorialVideo(AbstractVideo):
-    def __init__(self, video_id, *args, **kwargs):
-        self._video_src = 'http://www.vimeo.com/?watch={}'.format(video_id)
-
-        super(VimeoTutorialVideo, self).__init__(*args, **kwargs)
-
-    def get_video_data(self):
-        return {'video_type': 'tutorial', 'provider': 'Vimeo', 'src': self._video_src}
+        return {'video_type': self._video_type, 'provider': 'Vimeo', 'src': self._video_src}
 
 
 # Create videos for site one and site two
