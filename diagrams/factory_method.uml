@@ -3,60 +3,59 @@
   <ID>Python</ID>
   <OriginalElement>#/home/georgiev/Projects/python-patterns/factory_method.py</OriginalElement>
   <nodes>
-    <node x="1140.0" y="154.0">factory_method.YouTubeCommercialVideo</node>
-    <node x="627.0" y="0.0">factory_method.AbstractVideo</node>
-    <node x="760.0" y="154.0">factory_method.VimeoCommercialVideo</node>
-    <node x="217.5" y="303.0">factory_method.VideoFactory</node>
-    <node x="347.0" y="481.0">factory_method.SiteTwoVideoFactory</node>
-    <node x="0.0" y="154.0">factory_method.VimeoTutorialVideo</node>
-    <node x="380.0" y="154.0">factory_method.YouTubeTutorialVideo</node>
-    <node x="0.0" y="481.0">factory_method.SiteOneVideoFactory</node>
+    <node x="1080.0" y="129.0">factory_method.YouTubeCommercialVideo</node>
+    <node x="587.0" y="0.0">factory_method.AbstractVideo</node>
+    <node x="720.0" y="129.0">factory_method.VimeoCommercialVideo</node>
+    <node x="217.5" y="253.0">factory_method.VideoFactory</node>
+    <node x="347.0" y="382.0">factory_method.SiteTwoVideoFactory</node>
+    <node x="0.0" y="129.0">factory_method.VimeoTutorialVideo</node>
+    <node x="360.0" y="129.0">factory_method.YouTubeTutorialVideo</node>
+    <node x="0.0" y="382.0">factory_method.SiteOneVideoFactory</node>
   </nodes>
   <notes />
   <edges>
     <edge source="factory_method.VimeoTutorialVideo" target="factory_method.AbstractVideo">
-      <point x="0.0" y="-52.0" />
-      <point x="180.0" y="124.0" />
-      <point x="657.75" y="124.0" />
-      <point x="-92.25" y="52.0" />
+      <point x="0.0" y="-39.5" />
+      <point x="170.0" y="99.0" />
+      <point x="617.75" y="99.0" />
+      <point x="-92.25" y="39.5" />
     </edge>
     <edge source="factory_method.SiteTwoVideoFactory" target="factory_method.VideoFactory">
       <point x="0.0" y="-27.5" />
-      <point x="510.5" y="456.0" />
-      <point x="396.75" y="456.0" />
-      <point x="59.75" y="64.0" />
+      <point x="510.5" y="357.0" />
+      <point x="396.75" y="357.0" />
+      <point x="59.75" y="39.5" />
     </edge>
     <edge source="factory_method.SiteOneVideoFactory" target="factory_method.VideoFactory">
       <point x="0.0" y="-27.5" />
-      <point x="163.5" y="456.0" />
-      <point x="277.25" y="456.0" />
-      <point x="-59.75" y="64.0" />
+      <point x="163.5" y="357.0" />
+      <point x="277.25" y="357.0" />
+      <point x="-59.75" y="39.5" />
     </edge>
     <edge source="factory_method.YouTubeTutorialVideo" target="factory_method.AbstractVideo">
-      <point x="0.0" y="-52.0" />
-      <point x="560.0" y="134.0" />
-      <point x="719.25" y="134.0" />
-      <point x="-30.75" y="52.0" />
+      <point x="0.0" y="-39.5" />
+      <point x="530.0" y="109.0" />
+      <point x="679.25" y="109.0" />
+      <point x="-30.75" y="39.5" />
     </edge>
     <edge source="factory_method.VimeoCommercialVideo" target="factory_method.AbstractVideo">
-      <point x="0.0" y="-52.0" />
-      <point x="940.0" y="134.0" />
-      <point x="780.75" y="134.0" />
-      <point x="30.75" y="52.0" />
+      <point x="0.0" y="-39.5" />
+      <point x="890.0" y="109.0" />
+      <point x="740.75" y="109.0" />
+      <point x="30.75" y="39.5" />
     </edge>
     <edge source="factory_method.YouTubeCommercialVideo" target="factory_method.AbstractVideo">
-      <point x="0.0" y="-52.0" />
-      <point x="1320.0" y="124.0" />
-      <point x="842.25" y="124.0" />
-      <point x="92.25" y="52.0" />
+      <point x="0.0" y="-39.5" />
+      <point x="1250.0" y="99.0" />
+      <point x="802.25" y="99.0" />
+      <point x="92.25" y="39.5" />
     </edge>
   </edges>
-  <settings layout="Hierarchic Group" zoom="1.0" x="647.5" y="255.5" />
+  <settings layout="Hierarchic Group" zoom="1.0" x="647.5" y="195.5" />
   <SelectedNodes />
   <Categories>
     <Category>Methods</Category>
     <Category>Inner Classes</Category>
-    <Category>Fields</Category>
   </Categories>
 </Diagram>
 
