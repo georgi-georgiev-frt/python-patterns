@@ -11,7 +11,7 @@ Examples and references from: [https://github.com/domnikl/DesignPatternsPHP](htt
 
 Design Patterns:
 | [Abstract factory](abstract_factory.py) | use a generic function with specific factories | [:page_facing_up:](abstract_factory.py)<br>[:bar_chart:](diagrams/abstract_factory.png?raw=true)<br>[:book:](http://en.wikipedia.org/wiki/Abstract_factory_pattern) |
-| [Factory method](factory_method.py) | delegate a specialized function/method to create instances | |
+| [Factory method](factory_method.py) | delegate a specialized function/method to create instances | [:page_facing_up:](factory_method.py)<br>[:bar_chart:](diagrams/factory_method.png?raw=true)<br>[:book:](http://en.wikipedia.org/wiki/Factory_method_pattern) |
 
 All other Patterns: 
 
