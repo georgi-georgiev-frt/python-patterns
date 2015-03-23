@@ -13,15 +13,14 @@ Design Patterns:
 
 | Pattern | Description |     |
 |:-------:| ----------- | --- |
-| [Abstract factory](abstract_factory.py) | use a generic function with specific factories | [:page_facing_up:](abstract_factory.py)<br>[:bar_chart:](diagrams/abstract_factory.png?raw=true)<br>[:book:](http://en.wikipedia.org/wiki/Abstract_factory_pattern) |
-| [Factory method](factory_method.py) | delegate a specialized function/method to create instances | [:page_facing_up:](factory_method.py)<br>[:bar_chart:](diagrams/factory_method.png?raw=true)<br>[:book:](http://en.wikipedia.org/wiki/Factory_method_pattern) |
+| [Abstract factory](abstract_factory.py) | "Provide an interface for creating families of related or dependent objects without specifying their concrete classes." | [:page_facing_up:](abstract_factory.py)<br>[:bar_chart:](diagrams/abstract_factory.png?raw=true)<br>[:book:](http://en.wikipedia.org/wiki/Abstract_factory_pattern) |
+| [Factory method](factory_method.py) | "Define an interface for creating an object, but let the classes that implement the interface decide which class to instantiate. The Factory method lets a class defer instantiation to subclasses." | [:page_facing_up:](factory_method.py)<br>[:bar_chart:](diagrams/factory_method.png?raw=true)<br>[:book:](http://en.wikipedia.org/wiki/Factory_method_pattern) |
 
 All other Patterns: 
 
 | Pattern | Description |     |
 |:-------:| ----------- | --- |
 | [3-tier](3-tier.py) | data<->business logic<->presentation separation (strict relationships) | |
-| [abstract_factory](abstract_factory.py) | Provide an interface for creating families of related or dependent objects without specifying their concrete classes. | [:page_facing_up:](abstract_factory.py)<br>[:bar_chart:](diagrams/abstract_factory.png?raw=true)<br>[:book:](http://en.wikipedia.org/wiki/Abstract_factory_pattern) |
 | [adapter](adapter.py) | adapt one interface to another using a whitelist | |
 | [borg](borg.py) | a singleton with shared-state among instances | |
 | [bridge](bridge.py) | a client-provider middleman to soften interface changes | |
@@ -32,7 +31,6 @@ All other Patterns:
 | [composite](composite.py) | encapsulate and provide access to a number of different objects | |
 | [decorator](decorator.py) | wrap functionality with other functionality in order to affect outputs | |
 | [facade](facade.py) | use one class as an API to a number of others | |
-| [factory_method](factory_method.py) | Define an interface for creating an object, but let the classes that implement the interface decide which class to instantiate. The Factory method lets a class defer instantiation to subclasses. | |
 | [flyweight](flyweight.py) | transparently reuse existing instances of objects with similar/identical state | | 
 | [graph_search](graph_search.py) | (graphing algorithms, not design patterns) | |
 | [mediator](mediator.py) | an object that knows how to connect other objects and act as a proxy | |
