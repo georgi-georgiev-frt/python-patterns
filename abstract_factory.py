@@ -130,7 +130,7 @@ if __name__ == "__main__":
 # <img src="path/to/image.jpg" title="sample image" />
 # <div>This is our test text</div>
 # ====================
-# Rendering html for a page response:
-# <img src="path/to/image.jpg" title="sample image" />
-# <div>This is our test text</div>
+# Rendering json for an API response:
+# {"path": "path/to/image.jpg", "type": "picture", "name": "sample image"}
+# {"content": "This is our test text", "type": "text"}
 # ====================
