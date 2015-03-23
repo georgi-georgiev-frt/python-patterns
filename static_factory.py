@@ -1,23 +1,7 @@
 #!/usr/bin/env python
 # -*- coding: utf-8 -*-
 
-
-# Factory
-
-class StaticFactory:
-    TYPE_PRODUCT_A = 'a'
-    TYPE_PRODUCT_B = 'b'
-
-    @staticmethod
-    def create(type):
-        if type == StaticFactory.TYPE_PRODUCT_A:
-            return ProductA()
-
-        elif type == StaticFactory.TYPE_PRODUCT_B:
-            return ProductB()
-
-        else:
-            raise ValueError('Invalid type {}'.format(type))
+import inspect
 
 
 # Entities
@@ -32,7 +16,7 @@ class ProductA(ProductInterface):
         pass
 
     def get_type(self):
-        return StaticFactory.TYPE_PRODUCT_A
+        return 'This is Product A'
 
 
 class ProductB(ProductInterface):
@@ -40,7 +24,21 @@ class ProductB(ProductInterface):
         pass
 
     def get_type(self):
-        return StaticFactory.TYPE_PRODUCT_B
+        return 'This is Product B'
+
+
+# Factory
+
+class StaticFactory:
+    TYPE_PRODUCT_A = ProductA
+    TYPE_PRODUCT_B = ProductB
+
+    @staticmethod
+    def create(product):
+        if inspect.isclass(product):
+            return product()
+        else:
+            raise ValueError('Invalid product {}'.format(product))
 
 # Creating products
 if __name__ == "__main__":
@@ -49,3 +47,7 @@ if __name__ == "__main__":
 
     product_b = StaticFactory.create(StaticFactory.TYPE_PRODUCT_B)
     print product_b.get_type()
+
+### OUTPUT ###
+# This is Product A
+# This is Product B
