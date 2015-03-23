@@ -46,3 +46,11 @@ All other Patterns:
 | [template](template.py) | an object imposes a structure but takes pluggable components | |
 | [visitor](visitor.py) | invoke a callback for all items of a collection | |
 | [chaining_method](chaining_method.py) | continue callback next object method | |
+
+Abstract Factory vs Factory method patterns: what's the difference:
+-------------------------------------------------------------------
+
+Abstract Factory allows to create several different type of instances in one sub-class, and to particularize the 
+creations behavior in its different sub-classes; normally, Factory method declares the creation of only one type 
+of object that can be particularized according to the sub-classing mechanism. That's the difference.
+[http://stackoverflow.com/questions/4209791/design-patterns-abstract-factory-vs-factory-method](http://stackoverflow.com/questions/4209791/design-patterns-abstract-factory-vs-factory-method)
