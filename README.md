@@ -10,6 +10,7 @@ comments at the bottom up to date.
 Examples and references from: [https://github.com/domnikl/DesignPatternsPHP](https://github.com/domnikl/DesignPatternsPHP) 
 
 Design Patterns:
+
 | Pattern | Description |     |
 |:-------:| ----------- | --- |
 | [Abstract factory](abstract_factory.py) | use a generic function with specific factories | [:page_facing_up:](abstract_factory.py)<br>[:bar_chart:](diagrams/abstract_factory.png?raw=true)<br>[:book:](http://en.wikipedia.org/wiki/Abstract_factory_pattern) |
