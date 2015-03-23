@@ -13,7 +13,7 @@ Design Patterns:
 
 | Pattern | Description |     |
 |:-------:| ----------- | --- |
-| [Static factory](static_factory.py) | Class with static method for creating object | [:page_facing_up:](factory_method.py)<br>[:bar_chart:](diagrams/static_factory.png?raw=true) |
+| [Static factory](static_factory.py) | Class with static method for creating object | [:page_facing_up:](static_factory.py)<br>[:bar_chart:](diagrams/static_factory.png?raw=true) |
 | [Factory method](factory_method.py) | "Define an interface for creating an object, but let the classes that implement the interface decide which class to instantiate. The Factory method lets a class defer instantiation to subclasses." | [:page_facing_up:](factory_method.py)<br>[:bar_chart:](diagrams/factory_method.png?raw=true)<br>[:book:](http://en.wikipedia.org/wiki/Factory_method_pattern) |
 | [Abstract factory](abstract_factory.py) | "Provide an interface for creating families of related or dependent objects without specifying their concrete classes." | [:page_facing_up:](abstract_factory.py)<br>[:bar_chart:](diagrams/abstract_factory.png?raw=true)<br>[:book:](http://en.wikipedia.org/wiki/Abstract_factory_pattern) |
 
